@@ -14,17 +14,20 @@ export default function Recommendations() {
   const handleDownloadTxt = (rec: Recommendation) => {
     // Allows raw download of the formal recommendation letter
     const element = document.createElement("a");
-    const file = new Blob([
-      `RECOMMENDATION LETTER\n`,
-      `=====================\n\n`,
-      `Date: ${rec.date}\n`,
-      `Author: ${rec.author}\n`,
-      `Title: ${rec.title}\n`,
-      `Institution: ${rec.institution}\n`,
-      `Relationship: ${rec.relationship}\n\n`,
-      `-----------------------------------------------------\n\n`,
-      rec.fullLetter
-    ], { type: "text/plain" });
+    const file = new Blob(
+      [
+        `RECOMMENDATION LETTER\n`,
+        `=====================\n\n`,
+        `Date: ${rec.date}\n`,
+        `Author: ${rec.author}\n`,
+        `Title: ${rec.title}\n`,
+        `Institution: ${rec.institution}\n`,
+        `Relationship: ${rec.relationship}\n\n`,
+        `-----------------------------------------------------\n\n`,
+        rec.fullLetter,
+      ],
+      { type: "text/plain" },
+    );
     element.href = URL.createObjectURL(file);
     element.download = `Recommendation-${rec.author.replace(/\s+/g, "_")}.txt`;
     document.body.appendChild(element);
@@ -44,7 +47,8 @@ export default function Recommendations() {
               Professional Endorsements
             </h2>
             <p className="mt-4 text-stone-400 text-sm md:text-base">
-              Verbatim assessments from academic supervisors, global partners, and architectural firm directors highlighting design intelligence and collaborative execution.
+              Verbatim assessments from academic supervisors, global partners, and architectural firm directors
+              highlighting design intelligence and collaborative execution.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex items-center space-x-2 text-stone-500 font-mono text-xs">
@@ -66,21 +70,19 @@ export default function Recommendations() {
               </div>
 
               <div>
-                <p className="font-serif italic text-stone-300 text-sm leading-relaxed mb-6 group-hover:text-stone-200 transition-colors">
-                  "{rec.excerpt}"
-                </p>
+                <div className="w-full h-48 overflow-hidden rounded-sm mb-6 bg-stone-900 border border-white/5">
+                  <img
+                    src={rec.thumbnail}
+                    alt={`${rec.author} thumbnail`}
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-300"
+                  />
+                </div>
               </div>
 
               <div className="border-t border-white/5 pt-6 mt-4">
-                <h4 className="font-sans text-sm font-semibold text-stone-100 tracking-wide">
-                  {rec.author}
-                </h4>
-                <p className="font-mono text-xs text-[#FAC700] mt-1 font-medium">
-                  {rec.title}
-                </p>
-                <p className="font-sans text-xs text-stone-500 mt-1">
-                  {rec.institution}
-                </p>
+                <h4 className="font-sans text-sm font-semibold text-stone-100 tracking-wide">{rec.author}</h4>
+                <p className="font-mono text-xs text-[#FAC700] mt-1 font-medium">{rec.title}</p>
+                <p className="font-sans text-xs text-stone-500 mt-1">{rec.institution}</p>
 
                 <div className="mt-6 flex items-center justify-between">
                   <span className="font-mono text-[10px] text-stone-500 uppercase tracking-wider">
@@ -144,7 +146,10 @@ export default function Recommendations() {
               </div>
 
               {/* The Official Printed Letterhead Container */}
-              <div id="print-letterhead-content" className="flex-1 overflow-y-auto mt-6 print:m-0 print:p-0 font-serif text-stone-800 pr-2">
+              <div
+                id="print-letterhead-content"
+                className="flex-1 overflow-y-auto mt-6 print:m-0 print:p-0 font-serif text-stone-800 pr-2"
+              >
                 {/* Print Header banner */}
                 <div className="flex justify-between items-start border-b-2 border-stone-800 pb-8 mb-8">
                   <div>
@@ -171,7 +176,9 @@ export default function Recommendations() {
                 <div className="mb-8 text-xs font-sans text-stone-600 bg-stone-50 p-4 border border-stone-200 flex flex-wrap justify-between pr-8">
                   <div>
                     <span className="font-semibold block text-stone-800">RECOMMENDER:</span>
-                    <span>{selectedRec.author} ({selectedRec.title})</span>
+                    <span>
+                      {selectedRec.author} ({selectedRec.title})
+                    </span>
                   </div>
                   <div className="border-l border-stone-300 pl-4">
                     <span className="font-semibold block text-stone-800">CONTEXT:</span>
@@ -197,13 +204,19 @@ export default function Recommendations() {
                     <p className="font-sans text-[11px] text-stone-500">{selectedRec.title}</p>
                     <p className="font-sans text-[11px] text-stone-500">{selectedRec.institution}</p>
                   </div>
-                  
+
                   {/* Decorative Institutional stamp */}
                   <div className="text-right flex flex-col items-center opacity-65 translate-y-3">
                     <div className="w-16 h-16 rounded-full border-2 border-dashed border-stone-400 flex items-center justify-center text-[10px] text-stone-400 font-mono rotate-12 select-none">
-                      <span className="text-center font-bold font-sans">APPROVED<br/>SEAL</span>
+                      <span className="text-center font-bold font-sans">
+                        APPROVED
+                        <br />
+                        SEAL
+                      </span>
                     </div>
-                    <span className="font-mono text-[9px] text-stone-400 mt-1">{selectedRec.institution.split(',')[0]}</span>
+                    <span className="font-mono text-[9px] text-stone-400 mt-1">
+                      {selectedRec.institution.split(",")[0]}
+                    </span>
                   </div>
                 </div>
               </div>

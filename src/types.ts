@@ -47,7 +47,7 @@ export interface Recommendation {
   title: string;
   institution: string;
   relationship: string;
-  excerpt: string;
+  thumbnail: string;
   fullLetter: string;
   date: string;
   signatureUrl?: string;
