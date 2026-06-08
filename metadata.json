@@ -1,0 +1,6 @@
+{
+  "name": "Architect Portfolio Website",
+  "description": "A high-end, minimalist portfolio website with 15 custom architectural and design case studies, interactive case study views, dynamic quote engine, and recommendation documents viewer for Shima Pirasteh, Architect and Cultural Heritage Analyst.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

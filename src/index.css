@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --color-gold-accent: #FAC700;
+}
+
+/* Custom radial gradient container representing the Immersive UI background glow */
+.immersive-glow {
+  background-image: radial-gradient(circle at 15% 20%, #FAC700 0%, transparent 45%), radial-gradient(circle at 85% 75%, #333335 0%, transparent 50%);
+}
+
+/* Scrollbar styling for high-end catalog interfaces */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(254, 240, 138, 0.15);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FAC700;
+}
