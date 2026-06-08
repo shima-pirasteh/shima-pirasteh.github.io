@@ -8,7 +8,7 @@ export default function Contact() {
     email: "",
     organization: "",
     subject: "Project Collaboration",
-    message: ""
+    message: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -16,7 +16,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return;
-    
+
     setLoading(true);
     // Simulate submission latency
     setTimeout(() => {
@@ -30,7 +30,6 @@ export default function Contact() {
     <section id="contact" className="pt-32 pb-24 bg-[#0F0F10] px-6 md:px-12 lg:px-24 min-h-screen">
       <div className="max-w-6xl mx-auto">
         <div id="contact-outer-grid" className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
           {/* Column 1: Contact Methods Info */}
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
@@ -41,7 +40,8 @@ export default function Contact() {
                 Initiate a Collaboration
               </h2>
               <p className="mt-4 text-stone-400 text-sm md:text-base leading-relaxed">
-                Available for worldwide commissions, lectures, and cultural spatial consultations. Let can configure temporary structures, geographic mappings, or custom sensory layouts.
+                Available for worldwide commissions, lectures, and cultural spatial consultations. Let can configure
+                temporary structures, geographic mappings, or custom sensory layouts.
               </p>
             </div>
 
@@ -51,9 +51,14 @@ export default function Contact() {
                   <Mail className="text-[#FAC700]" size={18} />
                 </div>
                 <div>
-                  <span className="font-mono text-[10px] text-stone-500 uppercase block tracking-wider">Direct Correspondence</span>
-                  <a href="mailto:architect@heritage-design.com" className="font-sans text-stone-200 hover:text-[#FAC700] transition-colors text-sm font-medium">
-                    architect@heritage-design.com
+                  <span className="font-mono text-[10px] text-stone-500 uppercase block tracking-wider">
+                    Direct Correspondence
+                  </span>
+                  <a
+                    href="mailto:shima.pirasteh@gmail.com"
+                    className="font-sans text-stone-200 hover:text-[#FAC700] transition-colors text-sm font-medium"
+                  >
+                    shima.pirasteh@gmail.com
                   </a>
                 </div>
               </div>
@@ -63,9 +68,16 @@ export default function Contact() {
                   <Linkedin className="text-[#FAC700]" size={18} />
                 </div>
                 <div>
-                  <span className="font-mono text-[10px] text-stone-500 uppercase block tracking-wider">Professional Presence</span>
-                  <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="font-sans text-stone-200 hover:text-[#FAC700] transition-colors text-sm font-medium">
-                    linkedin.com/in/heritage-spatial-designer
+                  <span className="font-mono text-[10px] text-stone-500 uppercase block tracking-wider">
+                    Professional Presence
+                  </span>
+                  <a
+                    href="https://www.linkedin.com/in/shima-pirasteh"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-sans text-stone-200 hover:text-[#FAC700] transition-colors text-sm font-medium"
+                  >
+                    https://www.linkedin.com/in/shima-pirasteh
                   </a>
                 </div>
               </div>
@@ -75,16 +87,17 @@ export default function Contact() {
                   <MapPin className="text-[#FAC700]" size={18} />
                 </div>
                 <div>
-                  <span className="font-mono text-[10px] text-stone-500 uppercase block tracking-wider">Active Base</span>
-                  <span className="font-sans text-stone-200 text-sm font-medium">
-                    Riga, Latvia & Barcelona, Spain
+                  <span className="font-mono text-[10px] text-stone-500 uppercase block tracking-wider">
+                    Active Base
                   </span>
+                  <span className="font-sans text-stone-200 text-sm font-medium">Rome, Italy</span>
                 </div>
               </div>
             </div>
 
             <p className="text-stone-500 font-mono text-[10px]">
-              © {new Date().getFullYear()} Spatial Heritage Architect Portfolio. All rights reserved. Built with material honesty.
+              © {new Date().getFullYear()} Spatial Heritage Architect Portfolio. All rights reserved. Built with
+              material honesty.
             </p>
           </div>
 
@@ -201,7 +214,8 @@ export default function Contact() {
                     <CheckCircle2 size={54} className="text-[#FAC700] mb-6" />
                     <h3 className="font-serif text-2xl text-stone-100">Message Transmitted</h3>
                     <p className="text-stone-400 text-sm max-w-sm mt-3 leading-relaxed">
-                      Thank you for your transmission. The communication has been securely logged, and I will correspond within 48 business hours.
+                      Thank you for your transmission. The communication has been securely logged, and I will correspond
+                      within 48 business hours.
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
@@ -214,7 +228,6 @@ export default function Contact() {
               </AnimatePresence>
             </div>
           </div>
-
         </div>
       </div>
     </section>
