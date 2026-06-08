@@ -685,7 +685,7 @@ export default function CaseStudyView({ projectId, onBack, onNavigate }: CaseStu
                   <div
                     key={index}
                     id={`gallery-item-${index}`}
-                    className="group bg-[#111112]/40 border border-stone-900 rounded-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-[#FAC700]/40 shadow-md cursor-zoom-in"
+                    className="group bg-[#111112]/40 border border-stone-900 rounded-sm overflow-hidden transition-all duration-300 hover:border-[#FAC700]/40 shadow-md cursor-zoom-in"
                     onClick={() => setActiveLightbox({ src: imgUrl, caption: customCaption })}
                   >
                     <div className="aspect-[4/3] bg-stone-950 overflow-hidden relative flex items-center justify-center">
@@ -707,9 +707,6 @@ export default function CaseStudyView({ projectId, onBack, onNavigate }: CaseStu
                           Expand
                         </span>
                       </div>
-                    </div>
-                    <div className="p-5 bg-[#111112]/60 border-t border-stone-900/40">
-                      <p className="text-stone-300 text-xs font-sans leading-relaxed">{customCaption}</p>
                     </div>
                   </div>
                 );
