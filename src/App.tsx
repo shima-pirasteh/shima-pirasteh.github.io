@@ -83,36 +83,42 @@ export default function App() {
   };
 
   return (
-    <div id="portfolio-app-root" className="bg-stone-950 min-h-screen text-stone-300 antialiased selection:bg-amber-400 selection:text-stone-950 font-sans">
-      
+    <div
+      id="portfolio-app-root"
+      className="bg-stone-950 min-h-screen text-stone-300 antialiased selection:bg-amber-400 selection:text-stone-950 font-sans"
+    >
       {/* Persistent Navigation Header */}
       {!activeProjectId && (
-        <header 
+        <header
           className={`fixed top-0 left-0 right-0 z-50 transition-all duration-305 ${
-            scrolled 
-              ? "bg-[#0A0A0B]/90 backdrop-blur-md border-b border-white/5 py-4" 
-              : "bg-transparent py-6 md:py-8"
+            scrolled ? "bg-[#0A0A0B]/90 backdrop-blur-md border-b border-white/5 py-4" : "bg-transparent py-6 md:py-8"
           } px-4 md:px-12 lg:px-24`}
         >
           <div className="max-w-6xl mx-auto flex justify-between items-center">
             {/* Brand Logo */}
-            <button 
+            <button
               onClick={() => {
                 navigateToPage("home");
                 setMobileMenuOpen(false);
               }}
               className="flex items-center gap-3 group cursor-pointer text-left"
             >
-              <div className="w-10 h-10 border border-[#FAC700] flex items-center justify-center font-serif text-[#FAC700] text-xl transition-all duration-300 group-hover:bg-[#FAC700] group-hover:text-stone-950">S</div>
+              <div className="w-10 h-10 border border-[#FAC700] flex items-center justify-center font-serif text-[#FAC700] text-xl transition-all duration-300 group-hover:bg-[#FAC700] group-hover:text-stone-950">
+                S
+              </div>
               <div className="flex flex-col">
-                <span className="text-sm uppercase tracking-[0.3em] font-bold text-stone-100 transition-colors group-hover:text-[#FAC700]">Shima Pirasteh</span>
-                <span className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-mono">Portfolio & Survey Hub</span>
+                <span className="text-sm uppercase tracking-[0.3em] font-bold text-stone-100 transition-colors group-hover:text-[#FAC700]">
+                  Shima Pirasteh
+                </span>
+                <span className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-mono">
+                  Portfolio & Survey Hub
+                </span>
               </div>
             </button>
 
             {/* Desktop Navigation Links */}
             <nav className="font-mono text-[10px] uppercase tracking-[0.18em] text-stone-400 space-x-6 hidden md:flex items-center">
-              <button 
+              <button
                 onClick={() => navigateToPage("home")}
                 className={`transition-colors cursor-pointer pb-1 ${
                   activePage === "home" ? "text-[#FAC700] font-bold border-b border-[#FAC700]" : "hover:text-[#FAC700]"
@@ -120,7 +126,7 @@ export default function App() {
               >
                 Home
               </button>
-              <button 
+              <button
                 onClick={() => navigateToPage("works")}
                 className={`transition-colors cursor-pointer pb-1 ${
                   activePage === "works" ? "text-[#FAC700] font-bold border-b border-[#FAC700]" : "hover:text-[#FAC700]"
@@ -128,26 +134,22 @@ export default function App() {
               >
                 Selected Works
               </button>
-              <button 
-                onClick={() => navigateToPage("philosophy")}
-                className={`transition-colors cursor-pointer pb-1 ${
-                  activePage === "philosophy" ? "text-[#FAC700] font-bold border-b border-[#FAC700]" : "hover:text-[#FAC700]"
-                }`}
-              >
-                Philosophy
-              </button>
-              <button 
+              <button
                 onClick={() => navigateToPage("endorsements")}
                 className={`transition-colors cursor-pointer pb-1 ${
-                  activePage === "endorsements" ? "text-[#FAC700] font-bold border-b border-[#FAC700]" : "hover:text-[#FAC700]"
+                  activePage === "endorsements"
+                    ? "text-[#FAC700] font-bold border-b border-[#FAC700]"
+                    : "hover:text-[#FAC700]"
                 }`}
               >
                 Endorsements
               </button>
-              <button 
+              <button
                 onClick={() => navigateToPage("contact")}
                 className={`transition-colors cursor-pointer pb-1 ${
-                  activePage === "contact" ? "text-[#FAC700] font-bold border-b border-[#FAC700]" : "hover:text-[#FAC700]"
+                  activePage === "contact"
+                    ? "text-[#FAC700] font-bold border-b border-[#FAC700]"
+                    : "hover:text-[#FAC700]"
                 }`}
               >
                 Correspond
@@ -175,7 +177,7 @@ export default function App() {
             exit={{ opacity: 0, y: -10 }}
             className="fixed inset-x-0 top-[72px] bottom-0 bg-[#0A0A0B]/98 z-40 md:hidden flex flex-col justify-start pt-12 px-6 space-y-6 text-center select-none"
           >
-            <button 
+            <button
               onClick={() => {
                 navigateToPage("home");
                 setMobileMenuOpen(false);
@@ -186,7 +188,7 @@ export default function App() {
             >
               Home
             </button>
-            <button 
+            <button
               onClick={() => {
                 navigateToPage("works");
                 setMobileMenuOpen(false);
@@ -197,7 +199,7 @@ export default function App() {
             >
               Selected Works
             </button>
-            <button 
+            <button
               onClick={() => {
                 navigateToPage("philosophy");
                 setMobileMenuOpen(false);
@@ -208,7 +210,7 @@ export default function App() {
             >
               Philosophy
             </button>
-            <button 
+            <button
               onClick={() => {
                 navigateToPage("endorsements");
                 setMobileMenuOpen(false);
@@ -219,7 +221,7 @@ export default function App() {
             >
               Endorsements
             </button>
-            <button 
+            <button
               onClick={() => {
                 navigateToPage("contact");
                 setMobileMenuOpen(false);
@@ -244,11 +246,7 @@ export default function App() {
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            <CaseStudyView
-              projectId={activeProjectId}
-              onBack={handleBackToHome}
-              onNavigate={handleNavigateProject}
-            />
+            <CaseStudyView projectId={activeProjectId} onBack={handleBackToHome} onNavigate={handleNavigateProject} />
           </motion.div>
         ) : activePage === "home" ? (
           // Specific Home Route Render
@@ -374,7 +372,6 @@ export default function App() {
           }
         }
       `}</style>
-
     </div>
   );
 }
