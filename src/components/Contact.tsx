@@ -39,10 +39,7 @@ export default function Contact() {
               <h2 className="font-serif text-3xl md:text-4xl text-stone-100 tracking-tight leading-tight">
                 Initiate a Collaboration
               </h2>
-              <p className="mt-4 text-stone-400 text-sm md:text-base leading-relaxed">
-                Available for worldwide commissions, lectures, and cultural spatial consultations. Let can configure
-                temporary structures, geographic mappings, or custom sensory layouts.
-              </p>
+              <p className="mt-4 text-stone-400 text-sm md:text-base leading-relaxed">Feel free to reach out!</p>
             </div>
 
             <div className="my-8 space-y-6">
