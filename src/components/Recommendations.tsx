@@ -17,8 +17,8 @@ export default function Recommendations() {
               Professional Endorsements
             </h2>
             <p className="mt-4 text-stone-400 text-sm md:text-base">
-              Verbatim assessments from academic supervisors, global partners, and architectural firm directors
-              highlighting design intelligence and collaborative execution.
+              Recommendations from my previous professors / supervisors regarding my academic, architectural and
+              design/modelling skills.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex items-center space-x-2 text-stone-500 font-mono text-xs">
