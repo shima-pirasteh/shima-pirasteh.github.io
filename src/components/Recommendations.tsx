@@ -1,7 +1,10 @@
 import { RECOMMENDATIONS } from "../data";
-import { Download, ShieldCheck, FileText } from "lucide-react";
+import { Download, ShieldCheck, FileText, X, ZoomIn } from "lucide-react";
+import { useState } from "react";
 
 export default function Recommendations() {
+  const [activePreview, setActivePreview] = useState<string | null>(null);
+
   return (
     <section id="recommendations" className="pt-32 pb-24 bg-[#0A0A0B] px-6 md:px-12 lg:px-24 min-h-screen">
       <div className="max-w-6xl mx-auto">
@@ -26,23 +29,31 @@ export default function Recommendations() {
 
         <div id="rec-grid" className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {RECOMMENDATIONS.map((rec) => (
-            <a
+            <div
               key={rec.id}
-              href={rec.url}
-              download
               className="group relative bg-[#0F0F10] p-8 border border-white/5 hover:border-[#FAC700]/40 transition-all duration-300 flex flex-col justify-between rounded-sm"
             >
-              <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-[#0A0A0B] border border-white/5 p-2 text-[#FAC700] group-hover:bg-[#FAC700] group-hover:text-stone-900 transition-colors">
+              <a
+                href={rec.url}
+                download
+                onClick={(e) => e.stopPropagation()}
+                className="absolute top-0 right-8 transform -translate-y-1/2 bg-[#0A0A0B] border border-white/5 p-2 text-[#FAC700] hover:bg-[#FAC700] hover:text-stone-900 transition-colors z-10"
+              >
                 <Download size={18} />
-              </div>
+              </a>
 
-              {/* PDF Preview */}
-              <div className="w-full h-48 overflow-hidden rounded-sm mb-6 bg-stone-900 border border-white/5 relative">
-                {/* PDF badge */}
+              <button
+                onClick={() => setActivePreview(rec.url)}
+                className="w-full h-48 overflow-hidden rounded-sm mb-6 bg-stone-900 border border-white/5 relative cursor-zoom-in"
+              >
                 <div className="absolute top-0 left-0 z-10 bg-[#FAC700] text-stone-900 font-mono text-[10px] font-bold px-2 py-1 rounded-br-sm tracking-widest">
                   PDF
                 </div>
-
+                <div className="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                  <div className="bg-[#0A0A0B]/80 border border-[#FAC700]/40 p-2 rounded-sm">
+                    <ZoomIn size={20} className="text-[#FAC700]" />
+                  </div>
+                </div>
                 <iframe
                   src={`${rec.url}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
                   title={`${rec.author} recommendation letter preview`}
@@ -51,14 +62,11 @@ export default function Recommendations() {
                   loading="lazy"
                   aria-hidden="true"
                   onError={(e) => {
-                    // Hide iframe and show fallback on error
                     (e.currentTarget as HTMLIFrameElement).style.display = "none";
                     const fallback = e.currentTarget.nextElementSibling as HTMLElement;
                     if (fallback) fallback.style.display = "flex";
                   }}
                 />
-
-                {/* Fallback if iframe fails (e.g. browser blocks inline PDF) */}
                 <div
                   className="absolute inset-0 hidden items-center justify-center flex-col gap-2 bg-stone-900"
                   aria-hidden="true"
@@ -68,7 +76,7 @@ export default function Recommendations() {
                     Letter of Recommendation
                   </span>
                 </div>
-              </div>
+              </button>
 
               <div className="border-t border-white/5 pt-6 mt-4">
                 <h4 className="font-sans text-sm font-semibold text-stone-100 tracking-wide">{rec.author}</h4>
@@ -79,15 +87,59 @@ export default function Recommendations() {
                   <span className="font-mono text-[10px] text-stone-500 uppercase tracking-wider">
                     {rec.relationship}
                   </span>
-                  <span className="font-sans text-xs text-[#FAC700] font-semibold group-hover:underline flex items-center gap-1">
+                  <a
+                    href={rec.url}
+                    download
+                    onClick={(e) => e.stopPropagation()}
+                    className="font-sans text-xs text-[#FAC700] font-semibold hover:underline flex items-center gap-1"
+                  >
                     Download Letter
-                  </span>
+                  </a>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
+
+      {/* Lightbox modal */}
+      {activePreview && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={() => setActivePreview(null)}
+        >
+          <div
+            className="relative w-[90vw] max-w-4xl h-[90vh] bg-[#0F0F10] border border-white/10 rounded-sm shadow-2xl flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-6 py-3 border-b border-white/5">
+              <span className="font-mono text-xs text-stone-500 uppercase tracking-widest">Preview</span>
+              <div className="flex items-center gap-4">
+                <a
+                  href={activePreview}
+                  download
+                  className="flex items-center gap-2 font-mono text-xs text-[#FAC700] hover:underline"
+                >
+                  <Download size={14} />
+                  Download
+                </a>
+                <button
+                  onClick={() => setActivePreview(null)}
+                  className="text-stone-500 hover:text-stone-200 transition-colors"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+            </div>
+            <iframe
+              src={`${activePreview}#toolbar=0&navpanes=0&view=FitH`}
+              title="Recommendation letter full preview"
+              className="w-full flex-1 rounded-b-sm"
+              style={{ border: "none" }}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
