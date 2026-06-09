@@ -571,12 +571,12 @@ export default function CaseStudyView({ projectId, onBack, onNavigate }: CaseStu
           {/* Narrative Flow (Right Column with Key Visuals) */}
           <section id="cs-narrative" className="lg:col-span-8 space-y-12">
             {/* Short dynamic overview card */}
-            <div className="bg-[#111112]/40 border border-white/5 p-6 md:p-8 rounded-sm space-y-3">
+            {/* <div className="bg-[#111112]/40 border border-white/5 p-6 md:p-8 rounded-sm space-y-3">
               <span className="font-mono text-[9px] uppercase text-[#FAC700] font-bold tracking-widest">
                 Concept Summary
               </span>
               <p className="text-stone-200 text-sm md:text-base leading-relaxed font-sans">{project.summary}</p>
-            </div>
+            </div> */}
 
             {/* Detailed inline image showing designed outcome caption */}
             {project.caseStudy.challenge.image && (
