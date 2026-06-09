@@ -87,14 +87,6 @@ export default function Recommendations() {
                   <span className="font-mono text-[10px] text-stone-500 uppercase tracking-wider">
                     {rec.relationship}
                   </span>
-                  <a
-                    href={rec.url}
-                    download
-                    onClick={(e) => e.stopPropagation()}
-                    className="font-sans text-xs text-[#FAC700] font-semibold hover:underline flex items-center gap-1"
-                  >
-                    Download Letter
-                  </a>
                 </div>
               </div>
             </div>
@@ -115,14 +107,6 @@ export default function Recommendations() {
             <div className="flex items-center justify-between px-6 py-3 border-b border-white/5">
               <span className="font-mono text-xs text-stone-500 uppercase tracking-widest">Preview</span>
               <div className="flex items-center gap-4">
-                <a
-                  href={activePreview}
-                  download
-                  className="flex items-center gap-2 font-mono text-xs text-[#FAC700] hover:underline"
-                >
-                  <Download size={14} />
-                  Download
-                </a>
                 <button
                   onClick={() => setActivePreview(null)}
                   className="text-stone-500 hover:text-stone-200 transition-colors"
