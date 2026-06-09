@@ -596,7 +596,7 @@ export const PROJECTS: Project[] = [
   {
     id: "rolling-nest",
     title: "ROLLING NEST",
-    subtitle: "Nomadic Lifestyle",
+    subtitle: "Itinerary Design in Tuscany Region of Italy",
     category: "Design",
     thumbnail: "/images/2 2222.png",
     summary:
@@ -715,6 +715,7 @@ export const PROJECTS: Project[] = [
       "/images/food,tshirt.png",
       "/images/shop-bag.png",
       "/images/trifold-1.png",
+      "/images/trifold-5.jpeg",
     ],
   },
   {
