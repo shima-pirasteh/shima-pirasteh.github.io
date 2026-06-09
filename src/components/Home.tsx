@@ -9,8 +9,8 @@ interface HomeProps {
 
 export default function Home({ onEnterWorks }: HomeProps) {
   return (
-    <section 
-      id="home-page-root" 
+    <section
+      id="home-page-root"
       className="relative min-h-screen flex flex-col justify-start text-stone-100 overflow-hidden bg-black px-6 md:px-12 lg:px-24 pt-32 sm:pt-40"
     >
       {/* Immersive background double exposure calligraphy picture */}
@@ -65,12 +65,12 @@ export default function Home({ onEnterWorks }: HomeProps) {
               </p>
             </div>
 
-            {/* Minimalist introduction text */}
+            {/* Minimalist introduction text
             <div className="max-w-xl text-stone-200 font-sans text-sm md:text-base leading-relaxed">
               <p>
                 Structuring spatial dialogues where raw materials find harmony with historical memories and interactive architectural design.
               </p>
-            </div>
+            </div> */}
 
             {/* CTA Button to Enter works */}
             <div className="pt-2">
@@ -93,7 +93,6 @@ export default function Home({ onEnterWorks }: HomeProps) {
               <DynamicQuote />
             </div>
           </div>
-
         </motion.div>
       </div>
 

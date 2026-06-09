@@ -31,7 +31,7 @@ export const QUOTES: Quote[] = [
     id: "q4",
     text: "Technology is the magic that seamlessly connects our inner perceptions with the outside world.",
     author: "Shima Pirasteh",
-    context: "Experience Design",
+    context: "Design",
   },
   {
     id: "q5",
@@ -98,14 +98,8 @@ export const PROJECTS: Project[] = [
     role: "Lead Architectural Designer",
     timeline: "2020 - 2021",
     location: "Kiashahr, Gilan, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
-    tags: [
-      "Residential Architecture",
-      "Bioclimatic Design",
-      "Iranian Vernacular",
-      "Passive Cooling",
-      "Courtyard Villa",
-    ],
+    tools: ["Rhino", "AutoCAD"],
+    tags: ["Residential Architecture", "Bioclimatic Design", "Iranian Architecture"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -143,15 +137,15 @@ export const PROJECTS: Project[] = [
     id: "sea-ecomuseum",
     title: "SEA ECOMUSEUM",
     subtitle: "2011 Architectural Design 3, Mazandaran University",
-    category: "Architecture",
+    category: "Cultural Heritage",
     thumbnail: "/images/WhatsApp Image 2026-06-07 at 23.19.21 (12).jpeg",
     summary:
       "An innovative coastal museum concept inspired by the tension of a red fishing rope and the organic forms of sea foam bubbles along the shoreline.",
     role: "Lead Architectural Designer",
     timeline: "2011",
     location: "Babolsar, Mazandaran, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
-    tags: ["Coastal Architecture", "Conceptual Design", "Marine Education", "Biomimicry"],
+    tools: ["Rhino", "AutoCAD"],
+    tags: ["Coastal Architecture", "Conceptual Design"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -196,8 +190,8 @@ export const PROJECTS: Project[] = [
     role: "Lead Interior Architect",
     timeline: "2020",
     location: "Tehran, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
-    tags: ["Medical Clinic", "Interior Architecture", "Spatial Planning", "Biophilic Design", "Tehran"],
+    tools: ["Rhino", "AutoCAD"],
+    tags: ["Medical Clinic", "Interior Architecture"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -235,7 +229,7 @@ export const PROJECTS: Project[] = [
     id: "product-modeling-2019",
     title: "PRODUCT MODELING 2019",
     subtitle: "Mastermodeling workshop by Milad Cambari using 3Ds Max, Marvelous Designer, and Corona Renderer",
-    category: "Experience Design",
+    category: "Design",
     thumbnail: "/images/WhatsApp Image 2026-06-07 at 23.19.21 (5).jpeg",
     summary:
       "A sophisticated digital modeling and rendering exercise focused on hyper-realistic furniture visualization and fabric simulation.",
@@ -243,7 +237,7 @@ export const PROJECTS: Project[] = [
     timeline: "2019",
     location: "Tehran Exhibition Center",
     tools: ["3Ds Max", "Corona Renderer", "Marvelous Designer"],
-    tags: ["3D Modeling", "Furniture Design", "Rendering", "Texturing", "Digital Prototyping"],
+    tags: ["3D Modeling", "Rendering", "Texturing"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -280,7 +274,7 @@ export const PROJECTS: Project[] = [
   {
     id: "product-design-2019",
     title: "Product Design 2019",
-    subtitle: "Parametric 3D Printed Vessel",
+    subtitle: "3D Printed Vessel",
     category: "Architecture",
     thumbnail: "/images/WhatsApp Image 2026-06-07 at 23.19.21 (6).jpeg",
     summary:
@@ -289,7 +283,7 @@ export const PROJECTS: Project[] = [
     timeline: "2019",
     location: "Tehran, Iran",
     tools: ["Rhino", "3D Printing"],
-    tags: ["Parametric Design", "3D Printing", "Rhino 3D", "Computational Geometry", "Digital Fabrication"],
+    tags: ["Sculpturing", "3D Printing", "Rhino 3D", "Computational Geometry", "Digital Fabrication"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -334,8 +328,8 @@ export const PROJECTS: Project[] = [
     role: "Lead Architectural Designer",
     timeline: "2012",
     location: "Babolsar, Mazandaran, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
-    tags: ["Biomimicry", "Healthcare Architecture", "Parametric Design", "Folding Shell Structure", "Biophilic Design"],
+    tools: ["Rhino", "AutoCAD"],
+    tags: ["Sculpturing", "Folding Shell Structure"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -380,8 +374,8 @@ export const PROJECTS: Project[] = [
     role: "Lead Architectural Designer",
     timeline: "2021",
     location: "Tehran, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
-    tags: ["Facade Design", "Persian Architecture", "Parametric Design", "Chalipa", "Cultural Heritage"],
+    tools: ["Rhino", "AutoCAD"],
+    tags: ["Facade Design", "Iranian Architecture", "Parametric Design", "Cultural Heritage"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -426,8 +420,8 @@ export const PROJECTS: Project[] = [
     role: "Lead Architectural Designer",
     timeline: "2020",
     location: "Tehran, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
-    tags: ["Residential", "High-Rise", "Biophilic Design", "Green Architecture", "Tehran"],
+    tools: ["Rhino", "AutoCAD"],
+    tags: ["Post Production", "Rendering"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -472,8 +466,8 @@ export const PROJECTS: Project[] = [
     role: "Lead Architectural Designer",
     timeline: "2020 - 2021",
     location: "Tehran, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
-    tags: ["Residential Design", "Mountain Architecture", "3D Modeling", "Environmental Design"],
+    tools: ["Rhino", "AutoCAD"],
+    tags: ["Residential Design", "Mountain Architecture", "3D Modeling"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -518,7 +512,7 @@ export const PROJECTS: Project[] = [
     role: "Lead Architectural Designer",
     timeline: "2018",
     location: "Tehran, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
+    tools: ["Rhino", "AutoCAD"],
     tags: ["Interior Design", "Residential Renovation", "Spatial Optimization", "Modern Minimalist"],
     caseStudy: {
       challenge: {
@@ -564,8 +558,8 @@ export const PROJECTS: Project[] = [
     role: "Lead Architectural Designer",
     timeline: "2016",
     location: "Tehran, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
-    tags: ["Steep Terrain", "Terraced Housing", "Hillside Architecture", "Tehran", "Mixed-Use Development"],
+    tools: ["Rhino", "AutoCAD"],
+    tags: ["Steep Terrain", "Terraced Housing", "Mixed-Use Development", "Cultural Heritage"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -602,16 +596,16 @@ export const PROJECTS: Project[] = [
   {
     id: "rolling-nest",
     title: "ROLLING NEST",
-    subtitle: "Brand Identity, Mobile Application & Nomadic Micro-Housing Concept",
-    category: "Experience Design",
-    thumbnail: "/images/CANVA_proof_II-AY0PDHUL1nux-1.png",
+    subtitle: "Nomadic Lifestyle",
+    category: "Design",
+    thumbnail: "/images/2 2222.png",
     summary:
       "Rolling Nest is an integrated brand system and nomadic habitat concept combining a high-performance double-curved mobile shell on wheels with custom-tailored mobile applications and cohesive visual identity guidelines.",
     role: "Lead Creative Experience Director & Space Designer",
     timeline: "2024",
     location: "Tehran / London",
-    tools: ["Figma", "Rhino", "Adobe Suite", "Marvelous Designer"],
-    tags: ["Brand Identity", "Modular Architecture", "Environmental Design", "Nomadic Living", "Interaction Layouts"],
+    tools: ["Rhino", "Marvelous Designer"],
+    tags: ["Brand Identity", "Itinerary Design", "Nomadic Living", "Logo Design"],
     caseStudy: {
       challenge: {
         title: "The Nomadic Integration Challenge",
@@ -659,28 +653,21 @@ export const PROJECTS: Project[] = [
       "/images/Screenshot 2024-01-15 235009.png",
       "/images/Screenshot 2024-01-16 000510.png",
       "/images/2 2222.png",
-      "/images/trifold-1.png",
     ],
   },
   {
     id: "verde-vista",
     title: "VERDE VISTA",
-    subtitle: "Organic Brand Identity, Tactical Packaging Mockups & Experience Design Guidelines",
-    category: "Experience Design",
-    thumbnail: "/images/verdevista logo.png",
+    subtitle: "Organic Brand Identity",
+    category: "Design",
+    thumbnail: "/images/trifold-1.png",
     summary:
       "Verde Vista is an eco-centric lifestyle brand that blends modern earthen textures with organic retail packaging, custom typography, and dynamic visual touchpoints to construct a holistic sustainable identity.",
     role: "Lead Brand Strategist & Visual Designer",
     timeline: "2024",
     location: "Tehran / London",
-    tools: ["Figma", "Adobe Suite", "Illustrator", "Photoshop"],
-    tags: [
-      "Brand Identity",
-      "Sustainable Design",
-      "Earthen Aesthetics",
-      "Packaging Packaging Systems",
-      "Visual Curation",
-    ],
+    tools: ["Illustrator", "Photoshop"],
+    tags: ["Brand Identity", "Logo Design"],
     caseStudy: {
       challenge: {
         title: "The Sustainable Brand Integration",
@@ -727,6 +714,7 @@ export const PROJECTS: Project[] = [
       "/images/coffee.png",
       "/images/food,tshirt.png",
       "/images/shop-bag.png",
+      "/images/trifold-1.png",
     ],
   },
   {
@@ -741,8 +729,8 @@ export const PROJECTS: Project[] = [
     role: "Lead Architectural Designer",
     timeline: "2020 - 2021",
     location: "Tehran, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
-    tags: ["Vertical Farming", "Biomimicry", "Urban Agriculture", "Sustainable Architecture"],
+    tools: ["Rhino", "AutoCAD"],
+    tags: ["Vertical Farming", "Urban Agriculture"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",
@@ -787,8 +775,8 @@ export const PROJECTS: Project[] = [
     role: "Lead Interior Architect",
     timeline: "2020 - 2021",
     location: "Tehran, Iran",
-    tools: ["Rhino", "AutoCAD", "Revit"],
-    tags: ["Interior Design", "Retail Architecture", "Sustainable Materials", "Tehran", "Earthen Aesthetics"],
+    tools: ["Rhino", "AutoCAD"],
+    tags: ["Interior Design", "Retail Architecture", "Sustainable Materials", "Earthen Aesthetics"],
     caseStudy: {
       challenge: {
         title: "The Spatial Challenge",

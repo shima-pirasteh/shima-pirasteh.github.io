@@ -110,9 +110,7 @@ export default function App() {
                 <span className="text-sm uppercase tracking-[0.3em] font-bold text-stone-100 transition-colors group-hover:text-[#FAC700]">
                   Shima Pirasteh
                 </span>
-                <span className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-mono">
-                  Portfolio & Survey Hub
-                </span>
+                <span className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-mono">Portfolio</span>
               </div>
             </button>
 
