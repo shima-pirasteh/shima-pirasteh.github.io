@@ -1,5 +1,5 @@
 import { RECOMMENDATIONS } from "../data";
-import { Download, ShieldCheck } from "lucide-react";
+import { Download, ShieldCheck, FileText } from "lucide-react";
 
 export default function Recommendations() {
   return (
@@ -36,12 +36,38 @@ export default function Recommendations() {
                 <Download size={18} />
               </div>
 
-              <div className="w-full h-48 overflow-hidden rounded-sm mb-6 bg-stone-900 border border-white/5">
-                <img
-                  src={rec.thumbnail}
-                  alt={`${rec.author} thumbnail`}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-300"
+              {/* PDF Preview */}
+              <div className="w-full h-48 overflow-hidden rounded-sm mb-6 bg-stone-900 border border-white/5 relative">
+                {/* PDF badge */}
+                <div className="absolute top-0 left-0 z-10 bg-[#FAC700] text-stone-900 font-mono text-[10px] font-bold px-2 py-1 rounded-br-sm tracking-widest">
+                  PDF
+                </div>
+
+                <iframe
+                  src={`${rec.url}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
+                  title={`${rec.author} recommendation letter preview`}
+                  className="w-full h-full pointer-events-none"
+                  style={{ border: "none" }}
+                  loading="lazy"
+                  aria-hidden="true"
+                  onError={(e) => {
+                    // Hide iframe and show fallback on error
+                    (e.currentTarget as HTMLIFrameElement).style.display = "none";
+                    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
                 />
+
+                {/* Fallback if iframe fails (e.g. browser blocks inline PDF) */}
+                <div
+                  className="absolute inset-0 hidden items-center justify-center flex-col gap-2 bg-stone-900"
+                  aria-hidden="true"
+                >
+                  <FileText size={32} className="text-stone-600" />
+                  <span className="font-mono text-[10px] text-stone-500 uppercase tracking-widest">
+                    Letter of Recommendation
+                  </span>
+                </div>
               </div>
 
               <div className="border-t border-white/5 pt-6 mt-4">
