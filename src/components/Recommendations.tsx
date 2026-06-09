@@ -1,5 +1,5 @@
 import { RECOMMENDATIONS } from "../data";
-import { Download, ShieldCheck, FileText, X, ZoomIn } from "lucide-react";
+import { ShieldCheck, FileText, X, ZoomIn } from "lucide-react";
 import { useState } from "react";
 
 export default function Recommendations() {
@@ -33,15 +33,6 @@ export default function Recommendations() {
               key={rec.id}
               className="group relative bg-[#0F0F10] p-8 border border-white/5 hover:border-[#FAC700]/40 transition-all duration-300 flex flex-col justify-between rounded-sm"
             >
-              <a
-                href={rec.url}
-                download
-                onClick={(e) => e.stopPropagation()}
-                className="absolute top-0 right-8 transform -translate-y-1/2 bg-[#0A0A0B] border border-white/5 p-2 text-[#FAC700] hover:bg-[#FAC700] hover:text-stone-900 transition-colors z-10"
-              >
-                <Download size={18} />
-              </a>
-
               <button
                 onClick={() => setActivePreview(rec.url)}
                 className="w-full h-48 overflow-hidden rounded-sm mb-6 bg-stone-900 border border-white/5 relative cursor-zoom-in"
