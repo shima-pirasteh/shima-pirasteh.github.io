@@ -91,11 +91,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            <p className="text-stone-500 font-mono text-[10px]">
-              © {new Date().getFullYear()} Spatial Heritage Architect Portfolio. All rights reserved. Built with
-              material honesty.
-            </p>
           </div>
 
           {/* Column 2: Sleek Interactive Form */}
